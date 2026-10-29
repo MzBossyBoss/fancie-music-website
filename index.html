@@ -4,810 +4,860 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#302151">
-<meta name="description" content="Discover The Slimming Iron, a new addition to your beauty and body care routine.">
-<title>The Slimming Iron | Discover Beauty Innovation</title>
+<meta name="description" content="Introducing The Slimming Iron. Explore the product, discover its design, and see the rotating device demonstration.">
+<meta property="og:title" content="The Slimming Iron | Official Website">
+<meta property="og:description" content="Meet The Slimming Iron. Discover the device and watch the product presentation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.slimmingiron.com/">
+<title>The Slimming Iron | Official Website</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 :root {
   --purple: #302151;
   --deep: #211638;
+  --plum: #49336c;
   --lavender: #ae8ac9;
   --lilac: #e2d2ed;
   --blush: #f4e9ef;
-  --cream: #fbf7f8;
+  --ivory: #fbf8fc;
   --white: #ffffff;
-  --ink: #352c3e;
-  --muted: #746b79;
+  --ink: #30263a;
+  --muted: #685d70;
+  --line: #e6dce9;
+  --max: 1420px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   background: var(--white);
   color: var(--ink);
   font-family: "DM Sans", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-h1, h2, h3, p {
-  margin-top: 0;
-}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+img, video { max-width: 100%; display: block; }
+h1, h2, h3, p { margin-top: 0; }
 
 h1, h2, h3 {
   font-family: "Playfair Display", Georgia, serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
-p {
-  line-height: 1.75;
+p { line-height: 1.75; }
+
+.container {
+  width: min(100% - 48px, var(--max));
+  margin-inline: auto;
 }
 
-video {
-  display: block;
-  max-width: 100%;
-}
-
-.promo-bar {
-  background: var(--purple);
-  color: var(--white);
-  text-align: center;
-  padding: 11px 15px;
-  font-size: 12px;
-  letter-spacing: 1.7px;
+.eyebrow {
+  color: #8d66aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
-/* HEADER */
+.section-heading {
+  font-size: clamp(36px, 4.3vw, 64px);
+  line-height: 1.12;
+  color: var(--purple);
+  margin-bottom: 22px;
+}
 
-.site-header {
+.section-lead {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 15px 28px;
+  background: var(--purple);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid var(--purple);
+  transition: .2s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #594078;
+  border-color: #594078;
+  transform: translateY(-2px);
+}
+
+.btn.light {
+  color: var(--purple);
   background: white;
-  border-bottom: 1px solid #eee7ed;
+  border-color: white;
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--purple);
+  border-color: var(--purple);
+}
+
+.btn.outline:hover {
+  background: var(--purple);
+  color: white;
+}
+
+/* TOP BAR AND HEADER */
+
+.top-strip {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 11px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid var(--line);
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .header-inner {
   max-width: 1500px;
   margin: auto;
-  min-height: 92px;
-  padding: 15px 5%;
-  display: flex;
+  min-height: 96px;
+  padding: 16px 5%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav {
+  display: flex;
   gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav:last-child { justify-content: flex-end; }
+
+.nav a {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+.nav a:hover { color: #946cb2; }
+
+.nav a.nav-cta {
+  padding: 12px 16px;
+  border: 1px solid var(--purple);
 }
 
 .brand {
   text-align: center;
   color: var(--purple);
-  min-width: 240px;
+  white-space: nowrap;
 }
 
-.brand-main {
+.brand strong {
   display: block;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 26px;
-  letter-spacing: 4px;
+  font: 600 clamp(22px, 2.4vw, 32px) "Playfair Display", Georgia, serif;
+  letter-spacing: 2.5px;
 }
 
-.brand-sub {
+.brand small {
   display: block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 5px;
   margin-top: 5px;
-  color: #9873ae;
-}
-
-.header-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.header-links a {
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--purple);
-}
-
-.header-links a:hover {
-  color: #9b6bb7;
-}
-
-.header-cta {
-  border: 1px solid var(--purple);
-  padding: 12px 18px;
+  letter-spacing: 4px;
+  font-weight: 800;
+  font-size: 9px;
+  color: #9270a9;
 }
 
 /* HERO */
 
 .hero {
   display: grid;
-  grid-template-columns: 40% 32% 28%;
-  min-height: 610px;
-  background: var(--blush);
+  grid-template-columns: 42% 34% 24%;
+  min-height: 640px;
 }
 
-.hero-media {
+.hero-film {
+  min-height: 640px;
   position: relative;
-  background:
-    radial-gradient(circle at 50% 40%, #e9d6ee, #9681a7 70%, #513966);
   overflow: hidden;
-  min-height: 610px;
+  background:
+    radial-gradient(ellipse at 50% 40%, #dfcce7 0%, #a588b8 52%, #5b4076 100%);
 }
 
-.hero-media video {
+.hero-film::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.35);
+  top: 9%;
+  left: 10%;
+}
+
+.hero-film video {
+  position: absolute;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  position: absolute;
   inset: 0;
   object-fit: contain;
 }
 
-.video-fallback {
+.hero-fallback {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 40px;
-  color: white;
-  font-family: "Playfair Display", Georgia, serif;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  font-size: 40px;
-  letter-spacing: 2px;
-  opacity: .65;
-}
-
-.hero-media video {
+  color: rgba(255,255,255,.8);
+  font: 500 clamp(32px, 4vw, 55px) "Playfair Display", Georgia, serif;
+  padding: 30px;
   z-index: 1;
 }
 
-.video-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
-  background: rgba(33,22,56,.83);
-  color: white;
-  padding: 11px 17px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+.hero-fallback span {
+  display: block;
+  font: 700 12px "DM Sans", sans-serif;
+  letter-spacing: 3px;
+  margin-top: 20px;
 }
 
-.hero-offer {
-  background: #f7ede8;
-  padding: 55px 30px;
+.video-corner {
+  position: absolute;
+  z-index: 3;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 13px;
+  background: rgba(33,22,56,.8);
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+}
+
+.hero-copy {
+  background: #f7edf2;
+  padding: 55px 8%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.hero-offer-inner {
-  max-width: 430px;
-}
-
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #765b8e;
-  margin-bottom: 20px;
-}
-
-.hero-offer h1 {
-  font-size: clamp(48px, 5vw, 76px);
-  line-height: 1.04;
+.hero-copy h1 {
   color: var(--purple);
-  margin-bottom: 23px;
+  font-size: clamp(43px, 4.5vw, 74px);
+  line-height: 1.04;
+  margin-bottom: 22px;
 }
 
-.hero-offer h1 em {
+.hero-copy h1 em {
+  display: block;
   font-weight: 400;
 }
 
-.hero-offer .subtitle {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 25px;
+.hero-copy p {
+  max-width: 430px;
+  color: #5d5364;
+  font-size: 16px;
 }
 
-.hero-offer .big-line {
+.hero-divider {
+  width: 62px;
+  height: 2px;
+  margin: 10px auto 24px;
+  background: var(--lavender);
+}
+
+.hero-name {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(30px, 3vw, 44px);
+  font-size: clamp(25px, 2.5vw, 38px);
+  line-height: 1.2;
   color: var(--purple);
-  line-height: 1.12;
-  margin-bottom: 27px;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--purple);
-  color: white;
-  border: none;
-  padding: 18px 32px;
-  min-width: 200px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transition: background .2s;
-}
-
-.btn:hover {
-  background: #664580;
-}
-
-.offer-note {
-  margin-top: 20px;
-  font-size: 11px;
-  color: #655969;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-}
-
-.hero-side {
-  background:
-    linear-gradient(160deg, #d4bee5, #886da7 65%, #51376b);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 45px 35px;
-  min-height: 610px;
-  color: white;
-}
-
-.hero-side .small {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
   margin-bottom: 26px;
 }
 
-.hero-side h2 {
-  font-size: clamp(37px, 3.5vw, 55px);
-  line-height: 1.15;
-  margin-bottom: 20px;
+.hero-aside {
+  background: linear-gradient(145deg, #d4bde6, #9878b3 56%, #50356e);
+  padding: 55px 12%;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-side p {
+.hero-aside .eyebrow { color: white; }
+
+.hero-aside h2 {
+  font-size: clamp(35px, 3.6vw, 57px);
+  line-height: 1.13;
+  margin-bottom: 22px;
+}
+
+.hero-aside p {
   font-size: 15px;
-  line-height: 1.8;
-  color: #fff7ff;
+  color: #fff8ff;
+  max-width: 310px;
 }
 
-.hero-side .circle {
-  width: 96px;
-  height: 96px;
-  border: 1px solid white;
+.aside-seal {
+  margin-top: 30px;
+  border: 1px solid rgba(255,255,255,.85);
   border-radius: 50%;
-  margin: 20px auto 0;
+  width: 108px;
+  height: 108px;
   display: grid;
   place-items: center;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 20px;
-  font-style: italic;
+  text-align: center;
+  font: italic 19px "Playfair Display", Georgia, serif;
+  line-height: 1.2;
+  transform: rotate(-10deg);
 }
 
-/* INFO STRIP */
+/* THREE-PART BAND */
 
-.info-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.value-band {
   background: var(--purple);
   color: white;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.info-strip div {
-  padding: 23px 20px;
+.value-band div {
+  padding: 23px 12px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.22);
+  font-weight: 700;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border-right: 1px solid rgba(255,255,255,.2);
 }
 
 /* INTRO */
 
-.section-intro {
-  padding: 105px 6%;
+.intro {
+  padding: 110px 5%;
   text-align: center;
   background: white;
 }
 
-.section-intro h2 {
-  font-size: clamp(39px, 5vw, 67px);
-  max-width: 1000px;
-  margin: 0 auto 28px;
-  color: var(--purple);
-  line-height: 1.16;
+.intro .section-heading {
+  max-width: 950px;
+  margin-inline: auto;
 }
 
-.section-intro p {
-  max-width: 790px;
-  margin: auto;
-  color: var(--muted);
-  font-size: 17px;
+.intro .section-lead {
+  margin-inline: auto;
 }
 
-/* EDITORIAL PANELS */
+/* SHOWCASE CARDS */
 
-.editorial {
+.showcase-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   padding: 20px;
   background: white;
 }
 
-.editorial-card {
-  min-height: 470px;
+.showcase-card {
   display: grid;
-  grid-template-columns: 52% 48%;
-  overflow: hidden;
-  background: #f6f0f7;
-}
-
-.editorial-card:nth-child(2) {
-  background: #f2ecf4;
-}
-
-.editorial-visual {
-  background: linear-gradient(145deg, #e7d4ea, #8d70a6);
-  position: relative;
-  overflow: hidden;
+  grid-template-columns: 53% 47%;
+  background: var(--blush);
   min-height: 470px;
 }
 
-.editorial-visual video {
-  width: 100%;
-  height: 100%;
+.showcase-card:nth-child(2) { background: #f0e7f5; }
+
+.showcase-visual {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+  background: radial-gradient(circle, #e5d5ee, #9475ad);
+}
+
+.showcase-visual video {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.editorial-copy {
-  padding: 40px 30px;
+.showcase-copy {
+  padding: 35px 9%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-.editorial-copy h3 {
-  font-size: clamp(28px, 2.8vw, 40px);
-  line-height: 1.2;
+.showcase-copy h3 {
+  font-size: clamp(29px, 3vw, 44px);
   color: var(--purple);
-  margin-bottom: 18px;
+  line-height: 1.15;
+  margin-bottom: 17px;
 }
 
-.editorial-copy p {
-  color: #65596c;
-  font-size: 15px;
-}
+.showcase-copy p { font-size: 15px; color: var(--muted); }
 
-.small-btn {
-  background: var(--lavender);
-  color: white;
-  padding: 14px 23px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-top: 13px;
-}
-
-.small-btn:hover {
-  background: var(--purple);
-}
-
-/* BIG STATEMENT */
+/* EDITORIAL STATEMENT */
 
 .statement {
-  background: white;
+  padding: 110px 5%;
   text-align: center;
-  padding: 115px 6%;
+  background: #fff;
 }
 
 .statement h2 {
-  font-size: clamp(40px, 6vw, 82px);
-  color: #21172a;
-  line-height: 1.1;
-  margin: 0;
+  font-size: clamp(42px, 6.5vw, 96px);
+  line-height: 1.05;
+  color: var(--deep);
 }
 
-.statement em {
-  font-weight: 400;
-  color: #7c5c9b;
-}
+.statement em { color: #8f6bae; }
 
-/* TECHNOLOGY */
+/* PRODUCT FEATURE */
 
-.technology {
+.feature-story {
   display: grid;
-  grid-template-columns: 46% 54%;
-  background: var(--cream);
-  align-items: stretch;
+  grid-template-columns: 48% 52%;
+  background: var(--ivory);
 }
 
-.technology-photo {
-  min-height: 560px;
-  background: linear-gradient(140deg, #d9c5e2, #79618e);
+.feature-film {
+  background: radial-gradient(circle, #e6d9ed, #9477ad);
+  min-height: 580px;
   position: relative;
 }
 
-.technology-photo video {
-  width: 100%;
-  height: 100%;
+.feature-film video {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.technology-copy {
-  padding: 85px 9%;
+.feature-copy {
+  padding: 75px 11%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.technology-copy h2 {
-  font-size: clamp(39px, 4.5vw, 65px);
-  line-height: 1.12;
-  margin-bottom: 20px;
-  color: #20172d;
+.feature-copy p { color: var(--muted); }
+
+.feature-copy .btn {
+  align-self: flex-start;
+  margin-top: 12px;
 }
 
-.technology-copy h3 {
-  font-family: "DM Sans", Arial, sans-serif;
-  font-size: 19px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #6e5976;
-  margin-bottom: 28px;
-}
+/* PRODUCT PRESENTATION */
 
-.technology-copy p {
-  color: #625a65;
-  font-size: 16px;
-  max-width: 640px;
-}
-
-/* BENEFITS */
-
-.benefits {
-  padding: 100px 6%;
-  text-align: center;
+.presentation {
   background: white;
+  padding: 100px 5%;
+  text-align: center;
 }
 
-.benefits h2 {
-  font-size: clamp(38px, 4.5vw, 60px);
-  color: var(--purple);
-  margin-bottom: 55px;
-}
+.presentation .section-lead { margin: 0 auto 45px; }
 
-.benefits-grid {
-  max-width: 1200px;
-  margin: auto;
+.presentation-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1280px;
+  margin: auto;
 }
 
-.benefit-card {
-  background: var(--blush);
-  padding: 48px 35px;
+.presentation-card {
+  text-align: left;
+  background: #f7f1f8;
+  border: 1px solid var(--line);
+}
+
+.presentation-card .visual {
   min-height: 280px;
-  border-top: 4px solid var(--lavender);
+  background: radial-gradient(circle, #e4d2e9, #9b80b2);
+  position: relative;
+  overflow: hidden;
 }
 
-.benefit-number {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 48px;
-  color: #a782bb;
-  margin-bottom: 22px;
+.presentation-card .visual video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
-.benefit-card h3 {
-  font-size: 26px;
+.presentation-card .copy { padding: 30px 28px 35px; }
+
+.presentation-card h3 {
+  font-size: 29px;
   color: var(--purple);
   margin-bottom: 14px;
 }
 
-.benefit-card p {
-  color: #64596a;
-  font-size: 15px;
-}
+.presentation-card p { color: var(--muted); font-size: 14px; }
 
-/* SHOWCASE */
+/* PROMOTIONAL BREAK */
 
-.showcase {
-  background: #e7d9ec;
-  padding: 100px 6%;
+.promo-feature {
+  background: var(--purple);
+  color: white;
+  padding: 85px 5%;
   text-align: center;
 }
 
-.showcase h2 {
-  font-size: clamp(38px, 5vw, 65px);
-  color: var(--purple);
-  margin-bottom: 42px;
+.promo-feature .eyebrow { color: #dbc5e9; }
+
+.promo-feature h2 {
+  font-size: clamp(38px, 5.5vw, 77px);
+  margin: 0 auto 20px;
+  line-height: 1.1;
 }
 
-.showcase-video {
-  max-width: 900px;
+.promo-feature p {
+  max-width: 700px;
+  color: #e8ddf0;
+  margin: 0 auto 30px;
+}
+
+/* DEMONSTRATION */
+
+.demo {
+  padding: 100px 5%;
+  background: #eee1f2;
+  text-align: center;
+}
+
+.demo .section-lead { margin: 0 auto 35px; }
+
+.demo-frame {
+  width: min(100%, 980px);
   margin: auto;
-  background: #4f3a63;
-  border: 10px solid white;
-  box-shadow: 0 20px 60px rgba(48,33,81,.2);
+  background: #5b4271;
+  border: 12px solid white;
+  box-shadow: 0 24px 65px rgba(48,33,81,.2);
 }
 
-.showcase-video video {
+.demo-frame video {
   width: 100%;
-  max-height: 600px;
+  max-height: 620px;
   object-fit: contain;
 }
 
-.showcase p {
-  max-width: 680px;
-  margin: 30px auto 0;
-  color: #564660;
+/* FEATURES, WITHOUT UNSUPPORTED CLAIMS */
+
+.benefits {
+  padding: 105px 5%;
+  background: white;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+.benefit {
+  padding: 45px 32px;
+  background: var(--blush);
+  border-top: 4px solid var(--lavender);
+  text-align: left;
+}
+
+.benefit .number {
+  font: 500 45px "Playfair Display", Georgia, serif;
+  color: #9673ad;
+  margin-bottom: 22px;
+}
+
+.benefit h3 {
+  font-size: 28px;
+  color: var(--purple);
+  margin-bottom: 15px;
+}
+
+.benefit p { font-size: 15px; color: var(--muted); }
+
+/* INFORMATION */
+
+.information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--blush);
+}
+
+.information-visual {
+  position: relative;
+  min-height: 520px;
+  background: radial-gradient(circle, #e3cfeb, #8668a2);
+}
+
+.information-visual video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.information-copy {
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.information-copy p { color: var(--muted); }
+
+.information-copy ul {
+  margin: 12px 0 30px;
+  padding-left: 20px;
+  color: var(--purple);
+  line-height: 2;
+  font-size: 15px;
 }
 
 /* FAQ */
 
 .faq {
+  padding: 100px 5%;
   background: white;
-  padding: 100px 6%;
 }
 
-.faq-inner {
-  max-width: 900px;
-  margin: auto;
-}
-
-.faq h2 {
-  text-align: center;
-  font-size: clamp(36px, 4vw, 55px);
-  color: var(--purple);
-  margin-bottom: 40px;
-}
+.faq-inner { max-width: 900px; margin: auto; }
+.faq .section-heading { text-align: center; }
+.faq .eyebrow { text-align: center; }
 
 details {
-  border-bottom: 1px solid #dfd3e5;
   padding: 24px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 summary {
   cursor: pointer;
-  font-size: 18px;
+  font-weight: 700;
   color: var(--purple);
-  font-weight: 600;
+  font-size: 17px;
 }
 
 details p {
-  color: #64596a;
-  margin: 17px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+  padding-top: 15px;
+  margin-bottom: 0;
 }
 
-/* CALL TO ACTION */
+/* COMING SOON */
 
-.final-cta {
-  background: var(--purple);
-  padding: 110px 6%;
+.coming-soon {
+  padding: 100px 5%;
+  background: linear-gradient(125deg, #302151, #684582);
   text-align: center;
   color: white;
 }
 
-.final-cta h2 {
-  font-size: clamp(42px, 5vw, 70px);
-  line-height: 1.16;
-  margin-bottom: 25px;
+.coming-soon .eyebrow { color: #e6cbf4; }
+
+.coming-soon h2 {
+  font-size: clamp(45px, 6vw, 82px);
+  line-height: 1.1;
 }
 
-.final-cta p {
+.coming-soon p {
+  color: #f1e6f6;
   max-width: 650px;
   margin: 0 auto 30px;
-  color: #e7d9ee;
 }
 
-.final-cta .btn {
-  background: var(--lavender);
-}
-
-footer {
+.footer {
   background: var(--deep);
   color: white;
+  padding: 60px 5% 30px;
   text-align: center;
-  padding: 55px 6%;
 }
 
-.footer-brand {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 26px;
+.footer h2 {
+  font-size: 29px;
   letter-spacing: 3px;
-  margin-bottom: 15px;
 }
 
-footer p {
+.footer p {
   font-size: 12px;
-  color: #e3d9e9;
+  color: #e3d7ea;
 }
 
-/* TABLETS */
+.footer a { color: white; }
 
-@media (max-width: 1100px) {
-  .hero {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-media {
-    min-height: 540px;
-  }
-
-  .hero-side {
-    grid-column: 1 / -1;
-    min-height: 270px;
-  }
-
-  .editorial-card {
-    grid-template-columns: 1fr;
-  }
-
-  .editorial-visual {
-    min-height: 330px;
-  }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.18);
+  margin-top: 32px;
+  padding-top: 25px;
 }
 
-/* PHONES */
+/* RESPONSIVE */
 
-@media (max-width: 700px) {
+@media(max-width: 1150px) {
   .header-inner {
-    flex-direction: column;
-    gap: 18px;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
-  .header-links {
-    justify-content: center;
-    gap: 16px;
+  .nav:last-child { justify-content: center; }
+
+  .hero { grid-template-columns: 1fr 1fr; }
+
+  .hero-aside {
+    grid-column: 1 / -1;
+    min-height: 300px;
   }
 
-  .header-links a {
-    font-size: 11px;
-  }
+  .hero-film { min-height: 560px; }
 
-  .hero {
+  .showcase-card {
     grid-template-columns: 1fr;
   }
 
-  .hero-media {
-    min-height: 440px;
-  }
-
-  .hero-offer {
-    padding: 65px 25px;
-  }
-
-  .hero-side {
-    grid-column: auto;
-  }
-
-  .info-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .editorial {
-    grid-template-columns: 1fr;
-  }
-
-  .editorial-card {
-    min-height: auto;
-  }
-
-  .technology {
-    grid-template-columns: 1fr;
-  }
-
-  .technology-photo {
-    min-height: 420px;
-  }
-
-  .technology-copy {
-    padding: 65px 7%;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .statement {
-    padding: 85px 6%;
-  }
-
-  .showcase {
-    padding: 70px 5%;
-  }
+  .showcase-visual { min-height: 350px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+@media(max-width: 760px) {
+  .container { width: min(100% - 32px, var(--max)); }
+
+  .hero { grid-template-columns: 1fr; }
+
+  .hero-film { min-height: 430px; }
+
+  .hero-copy { padding: 70px 7%; }
+
+  .hero-aside {
+    grid-column: auto;
+    min-height: 300px;
+    padding: 50px 8%;
   }
+
+  .value-band { grid-template-columns: 1fr; }
+
+  .value-band div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+
+  .showcase-grid { grid-template-columns: 1fr; }
+
+  .feature-story { grid-template-columns: 1fr; }
+
+  .feature-film { min-height: 400px; }
+
+  .feature-copy { padding: 70px 7%; }
+
+  .presentation-grid { grid-template-columns: 1fr; }
+
+  .benefits-grid { grid-template-columns: 1fr; }
+
+  .information { grid-template-columns: 1fr; }
+
+  .information-visual { min-height: 400px; }
+
+  .information-copy { padding: 70px 7%; }
+
+  .intro, .statement, .presentation, .benefits,
+  .faq, .demo, .coming-soon {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .nav { justify-content: center; }
+
+  .brand strong { font-size: 23px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP PROMOTION -->
-
-<div class="promo-bar">
-  Introducing a New Beauty Experience
+<div class="top-strip">
+  Introducing The Slimming Iron | Official Product Website
 </div>
 
-<!-- HEADER -->
-
-<header class="site-header">
+<header class="header">
   <div class="header-inner">
-
-    <nav class="header-links" aria-label="Product navigation">
+    <nav class="nav" aria-label="Explore">
       <a href="#discover">Discover</a>
-      <a href="#benefits">Benefits</a>
+      <a href="#features">Features</a>
+      <a href="#demonstration">Watch Demo</a>
     </nav>
 
-    <a href="#home" class="brand">
-      <span class="brand-main">SLIMMING IRON</span>
-      <span class="brand-sub">BEAUTY TECHNOLOGY</span>
+    <a class="brand" href="#home">
+      <strong>THE SLIMMING IRON</strong>
+      <small>BEAUTY TECHNOLOGY</small>
     </a>
 
-    <nav class="header-links" aria-label="Main navigation">
-      <a href="#technology">Technology</a>
-      <a href="#faq">FAQ</a>
-      <a href="#explore" class="header-cta">Explore</a>
+    <nav class="nav" aria-label="More information">
+      <a href="#details">Product Details</a>
+      <a href="#questions">FAQ</a>
+      <a class="nav-cta" href="#availability">Coming Soon</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
-<!-- MAIN INFOMERCIAL HERO -->
+<!-- THREE PANEL INFOMERCIAL HERO -->
 
 <section class="hero" id="home">
 
-  <!-- REAL ROTATING PRODUCT VIDEO -->
-
-  <div class="hero-media">
-    <div class="video-fallback">
+  <div class="hero-film">
+    <div class="hero-fallback">
       THE SLIMMING IRON
+      <span>PRODUCT PRESENTATION</span>
     </div>
 
     <video
@@ -816,438 +866,482 @@ footer p {
       loop
       playsinline
       controls
-      preload="metadata"
-      aria-label="The Slimming Iron rotating product demonstration"
+      preload="auto"
+      aria-label="Rotating demonstration of The Slimming Iron"
     >
-      <source src="hero.mp4" type="video/mp4">
-      Your browser does not support video.
+      <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+      Your browser does not support MP4 video.
     </video>
 
-    <div class="video-caption">
-      The Slimming Iron | Product Showcase
-    </div>
+    <span class="video-corner">
+      The Slimming Iron | Product Film
+    </span>
   </div>
 
-  <!-- CENTER PROMOTIONAL PANEL -->
-
-  <div class="hero-offer">
-    <div class="hero-offer-inner">
-
-      <div class="eyebrow">
-        The Future of Personal Body Care
-      </div>
-
-      <h1>
-        BEAUTY<br>
-        <em>Reimagined</em>
-      </h1>
-
-      <p class="subtitle">
-        Introducing a modern beauty device
-        designed to bring innovation into
-        your personal care routine.
-      </p>
-
-      <div class="big-line">
-        MEET THE<br>
-        SLIMMING IRON
-      </div>
-
-      <a href="#discover" class="btn">
-        DISCOVER MORE
-      </a>
-
-      <div class="offer-note">
-        Beauty Meets Innovation
-      </div>
-
+  <div class="hero-copy">
+    <div class="eyebrow">
+      The New Beauty Device To Discover
     </div>
+
+    <h1>
+      Meet the<br>
+      <em>Slimming Iron.</em>
+    </h1>
+
+    <p>
+      A distinctive beauty device with a modern look.
+      See it from every angle and discover what makes
+      The Slimming Iron stand out.
+    </p>
+
+    <div class="hero-divider"></div>
+
+    <div class="hero-name">
+      ONE DEVICE.<br>
+      A NEW BEAUTY EXPERIENCE.
+    </div>
+
+    <a href="#discover" class="btn">
+      Discover The Slimming Iron
+    </a>
   </div>
 
-  <!-- RIGHT LAVENDER PANEL -->
-
-  <div class="hero-side">
-
-    <div class="small">
-      A New Beauty Essential
-    </div>
+  <div class="hero-aside">
+    <div class="eyebrow">The Product Spotlight</div>
 
     <h2>
-      Make Time<br>
-      for <em>You.</em>
+      See The<br>
+      Difference<br>
+      in Design.
     </h2>
 
     <p>
-      Your beauty routine deserves
-      thoughtful design, innovation,
-      and a touch of luxury.
+      Get a closer look at the shape,
+      finish, and presentation of
+      The Slimming Iron.
     </p>
 
-    <div class="circle">
-      SELF<br>CARE
+    <div class="aside-seal">
+      Coming<br>Soon
     </div>
-
   </div>
 
 </section>
 
-<!-- THREE BENEFIT BANNER -->
+<!-- PROMOTIONAL STRIP -->
 
-<div class="info-strip">
-  <div>Beauty Innovation</div>
-  <div>Personal Body Care</div>
-  <div>Modern Device Design</div>
+<div class="value-band">
+  <div>Product Reveal</div>
+  <div>Up Close With The Slimming Iron</div>
+  <div>Official Device Presentation</div>
 </div>
 
-<!-- BRAND INTRODUCTION -->
+<!-- MAIN INTRODUCTION -->
 
-<section class="section-intro" id="discover">
+<section class="intro" id="discover">
+  <div class="eyebrow">Introducing The Slimming Iron</div>
 
-  <div class="eyebrow">
-    Meet The Slimming Iron
-  </div>
+  <h2 class="section-heading">
+    Meet the Device Behind the Name.
+  </h2>
+
+  <p class="section-lead">
+    Welcome to the official home of The Slimming Iron.
+    Explore the product through a rotating video demonstration,
+    a closer look at its exterior, and an introduction to
+    the device as we prepare to share more product information.
+  </p>
+</section>
+
+<!-- SIDE BY SIDE PROMOTIONAL PANELS -->
+
+<section class="showcase-grid" aria-label="Product highlights">
+
+  <article class="showcase-card">
+    <div class="showcase-visual">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="showcase-copy">
+      <div class="eyebrow">In The Spotlight</div>
+      <h3>A Closer Look at The Slimming Iron</h3>
+
+      <p>
+        Take in the product's form, finish, and details
+        in a rotating view designed to introduce the device.
+      </p>
+
+      <a class="btn outline" href="#demonstration">
+        Watch The Demo
+      </a>
+    </div>
+  </article>
+
+  <article class="showcase-card">
+    <div class="showcase-visual">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="showcase-copy">
+      <div class="eyebrow">Product Discovery</div>
+      <h3>Every Angle. Every Detail.</h3>
+
+      <p>
+        See the device from several perspectives
+        and explore its modern exterior design.
+      </p>
+
+      <a class="btn outline" href="#features">
+        Explore Features
+      </a>
+    </div>
+  </article>
+
+</section>
+
+<!-- BIG INFOMERCIAL HEADLINE -->
+
+<section class="statement">
+  <div class="eyebrow">The Slimming Iron Product Reveal</div>
 
   <h2>
-    Discover a Beautifully Different
-    Approach to Body Care.
+    INTRODUCING<br>
+    <em>THE SLIMMING</em><br>
+    IRON.
+  </h2>
+</section>
+
+<!-- FULL WIDTH FEATURE STORY -->
+
+<section class="feature-story" id="features">
+  <div class="feature-film">
+    <video autoplay muted loop playsinline preload="none">
+      <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="feature-copy">
+    <div class="eyebrow">The Product Up Close</div>
+
+    <h2 class="section-heading">
+      Designed to Make an Impression.
+    </h2>
+
+    <p>
+      The Slimming Iron features a distinctive exterior
+      with contrasting finishes and an eye-catching
+      profile. The rotating presentation lets you examine
+      the device from different angles.
+    </p>
+
+    <p>
+      Explore its design now, with additional device
+      information and operating instructions to follow.
+    </p>
+
+    <a class="btn" href="#demonstration">
+      See It In Motion
+    </a>
+  </div>
+</section>
+
+<!-- THREE VISUAL PRESENTATION CARDS -->
+
+<section class="presentation">
+  <div class="eyebrow">The Product Presentation</div>
+
+  <h2 class="section-heading">
+    Take a Closer Look.
+  </h2>
+
+  <p class="section-lead">
+    Discover the product's exterior through rotating
+    views and visual highlights.
+  </p>
+
+  <div class="presentation-grid">
+
+    <article class="presentation-card">
+      <div class="visual">
+        <video autoplay muted loop playsinline preload="none">
+          <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="copy">
+        <div class="eyebrow">01 / Product Profile</div>
+        <h3>Distinctive Shape</h3>
+        <p>
+          View the outline and overall form
+          of The Slimming Iron.
+        </p>
+      </div>
+    </article>
+
+    <article class="presentation-card">
+      <div class="visual">
+        <video autoplay muted loop playsinline preload="none">
+          <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="copy">
+        <div class="eyebrow">02 / Exterior Finish</div>
+        <h3>Contrasting Details</h3>
+        <p>
+          Explore the white, black, and metallic
+          tones visible in the product presentation.
+        </p>
+      </div>
+    </article>
+
+    <article class="presentation-card">
+      <div class="visual">
+        <video autoplay muted loop playsinline preload="none">
+          <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="copy">
+        <div class="eyebrow">03 / Full Product View</div>
+        <h3>See It Rotate</h3>
+        <p>
+          Watch the full rotating presentation
+          of The Slimming Iron.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROMOTIONAL BREAK -->
+
+<section class="promo-feature">
+  <div class="eyebrow">Official Product Introduction</div>
+
+  <h2>
+    A NEW NAME<br>
+    IN BEAUTY TECHNOLOGY.
   </h2>
 
   <p>
-    The Slimming Iron introduces a modern approach
-    to at-home beauty routines. With a distinctive
-    design and a focus on personal care, the device
-    brings the experience of beauty technology
-    into your everyday life.
+    Meet The Slimming Iron through its official
+    product presentation and discover more as
+    additional information becomes available.
   </p>
 
+  <a href="#details" class="btn light">
+    Product Information
+  </a>
 </section>
 
-<!-- TWO EDITORIAL PRODUCT PANELS -->
+<!-- PRODUCT VIDEO DEMONSTRATION -->
 
-<section class="editorial">
+<section class="demo" id="demonstration">
+  <div class="eyebrow">Watch The Slimming Iron</div>
 
-  <article class="editorial-card">
-
-    <div class="editorial-visual">
-      <video autoplay muted loop playsinline preload="none">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="editorial-copy">
-
-      <div class="eyebrow">
-        Discover The Design
-      </div>
-
-      <h3>
-        Beauty Meets Modern Technology
-      </h3>
-
-      <p>
-        Explore the distinctive look
-        of The Slimming Iron and the
-        design behind your newest
-        beauty essential.
-      </p>
-
-      <a href="#technology" class="small-btn">
-        Learn About The Device
-      </a>
-
-    </div>
-
-  </article>
-
-  <article class="editorial-card">
-
-    <div class="editorial-visual">
-      <video autoplay muted loop playsinline preload="none">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="editorial-copy">
-
-      <div class="eyebrow">
-        Your Personal Routine
-      </div>
-
-      <h3>
-        Designed With Beauty in Mind
-      </h3>
-
-      <p>
-        A modern addition to your
-        body care collection, bringing
-        a new perspective to your
-        personal beauty routine.
-      </p>
-
-      <a href="#benefits" class="small-btn">
-        Explore The Experience
-      </a>
-
-    </div>
-
-  </article>
-
-</section>
-
-<!-- LARGE EDITORIAL HEADLINE -->
-
-<section class="statement">
-
-  <div class="eyebrow">
-    The Slimming Iron Philosophy
-  </div>
-
-  <h2>
-    YOUR BEAUTY.<br>
-    <em>YOUR ROUTINE.</em><br>
-    YOUR MOMENT.
+  <h2 class="section-heading">
+    See the Product in Motion.
   </h2>
 
-</section>
+  <p class="section-lead">
+    Watch the rotating product showcase and
+    examine The Slimming Iron from different angles.
+  </p>
 
-<!-- PRODUCT TECHNOLOGY -->
-
-<section class="technology" id="technology">
-
-  <div class="technology-photo">
-    <video autoplay muted loop playsinline preload="none">
-      <source src="hero.mp4" type="video/mp4">
+  <div class="demo-frame">
+    <video controls playsinline preload="metadata" aria-label="Full Slimming Iron product video">
+      <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
+      Your browser does not support MP4 video.
     </video>
   </div>
-
-  <div class="technology-copy">
-
-    <div class="eyebrow">
-      Behind The Slimming Iron
-    </div>
-
-    <h2>
-      THE POWER<br>
-      OF BEAUTY<br>
-      TECHNOLOGY
-    </h2>
-
-    <h3>
-      Innovation for Your Routine
-    </h3>
-
-    <p>
-      Beauty technology is creating new ways
-      to approach personal care at home.
-      The Slimming Iron brings that
-      inspiration into a distinctive
-      beauty device.
-    </p>
-
-    <p>
-      Explore the device and learn how
-      it can become part of your
-      personal body care experience.
-    </p>
-
-    <a href="#showcase" class="btn">
-      WATCH THE PRODUCT
-    </a>
-
-  </div>
-
 </section>
 
-<!-- BENEFITS -->
+<!-- PRODUCT HIGHLIGHTS -->
 
-<section class="benefits" id="benefits">
+<section class="benefits" aria-labelledby="highlights-title">
+  <div class="eyebrow">At a Glance</div>
 
-  <div class="eyebrow">
-    More Than a Beauty Device
-  </div>
-
-  <h2>
-    The Slimming Iron Experience
+  <h2 class="section-heading" id="highlights-title">
+    Discover The Details.
   </h2>
 
   <div class="benefits-grid">
-
-    <article class="benefit-card">
-      <div class="benefit-number">01</div>
-      <h3>Modern Beauty</h3>
+    <article class="benefit">
+      <div class="number">01</div>
+      <h3>Modern Exterior</h3>
       <p>
-        Discover a fresh addition to
-        your beauty and body care collection.
+        A distinctive look with contrasting
+        product colors and finishes.
       </p>
     </article>
 
-    <article class="benefit-card">
-      <div class="benefit-number">02</div>
-      <h3>Personal Care</h3>
+    <article class="benefit">
+      <div class="number">02</div>
+      <h3>Product Showcase</h3>
       <p>
-        Make your beauty routine
-        a moment dedicated to yourself.
+        Rotating footage that offers a closer
+        look at the device's overall appearance.
       </p>
     </article>
 
-    <article class="benefit-card">
-      <div class="benefit-number">03</div>
-      <h3>Innovative Design</h3>
+    <article class="benefit">
+      <div class="number">03</div>
+      <h3>More to Discover</h3>
       <p>
-        Explore a distinctive device
-        designed with modern beauty in mind.
+        Detailed device functions and specifications
+        will be featured as they are finalized.
       </p>
     </article>
-
   </div>
 </section>
 
-<!-- VIDEO SHOWCASE -->
+<!-- MORE INFORMATION -->
 
-<section class="showcase" id="showcase">
-
-  <div class="eyebrow">
-    See The Device
-  </div>
-
-  <h2>
-    Meet Your New Beauty Essential
-  </h2>
-
-  <div class="showcase-video">
-    <video controls playsinline preload="metadata">
-      <source src="hero.mp4" type="video/mp4">
-      Your browser does not support video.
+<section class="information" id="details">
+  <div class="information-visual">
+    <video autoplay muted loop playsinline preload="none">
+      <source src="The%20Sliming%20Iron%20Rotating.mp4" type="video/mp4">
     </video>
   </div>
 
-  <p>
-    Take a closer look at The Slimming Iron
-    and discover its distinctive product design.
-  </p>
+  <div class="information-copy">
+    <div class="eyebrow">The Slimming Iron Details</div>
 
+    <h2 class="section-heading">
+      Learn More About the Device.
+    </h2>
+
+    <p>
+      This official page introduces The Slimming Iron.
+      More information will be shared on the device's
+      functions, specifications, operating instructions,
+      and availability.
+    </p>
+
+    <ul>
+      <li>Official product overview</li>
+      <li>Rotating product demonstration</li>
+      <li>Exterior and design presentation</li>
+      <li>Detailed specifications coming soon</li>
+      <li>Product availability updates coming soon</li>
+    </ul>
+
+    <a class="btn" href="#availability">
+      Availability Information
+    </a>
+  </div>
 </section>
 
-<!-- FREQUENTLY ASKED QUESTIONS -->
+<!-- FAQ -->
 
-<section class="faq" id="faq">
-
+<section class="faq" id="questions">
   <div class="faq-inner">
+    <div class="eyebrow">Questions & Answers</div>
 
-    <div class="eyebrow" style="text-align:center">
-      Questions and Answers
-    </div>
-
-    <h2>
-      Get to Know The Slimming Iron
+    <h2 class="section-heading">
+      Frequently Asked Questions
     </h2>
 
     <details>
       <summary>What is The Slimming Iron?</summary>
       <p>
-        The Slimming Iron is a beauty device
-        developed for personal body care.
-        Additional technology and usage information
-        will be provided in the product specifications.
+        The Slimming Iron is a beauty device.
+        This website introduces the product and its exterior
+        design. Detailed device functions and specifications
+        will be added when confirmed.
       </p>
     </details>
 
     <details>
-      <summary>Where can I learn about the technology?</summary>
+      <summary>Can I watch the device demonstration?</summary>
       <p>
-        Detailed information about the device's
-        functions and operating instructions
-        will be added to the website.
+        Yes. The rotating product video is featured
+        in the hero and product demonstration sections.
       </p>
     </details>
 
     <details>
-      <summary>How do I use the device?</summary>
+      <summary>Are detailed specifications available?</summary>
       <p>
-        Follow the official instructions
-        supplied with the product.
-        Usage guidance and precautions
-        will be published here.
+        Additional specifications, usage instructions,
+        and precautions have not yet been published
+        on this landing page.
       </p>
     </details>
 
     <details>
-      <summary>Where can I find product updates?</summary>
+      <summary>Where can I find availability information?</summary>
       <p>
-        Visit slimmingiron.com for the latest
-        product information and announcements.
+        Visit www.slimmingiron.com for official updates
+        as availability details are announced.
       </p>
     </details>
-
   </div>
-
 </section>
 
-<!-- ENDING CALL TO ACTION -->
+<!-- COMING SOON -->
 
-<section class="final-cta" id="explore">
-
-  <div class="eyebrow" style="color:#d6b6ed">
-    Discover The Slimming Iron
-  </div>
+<section class="coming-soon" id="availability">
+  <div class="eyebrow">The Slimming Iron</div>
 
   <h2>
-    A New Chapter<br>
-    in Beauty Begins Here.
+    SOMETHING NEW<br>
+    IS COMING.
   </h2>
 
   <p>
-    Experience a fresh perspective on beauty
-    and explore the design of The Slimming Iron.
+    Discover The Slimming Iron and return for
+    product announcements, specifications,
+    and availability information.
   </p>
 
-  <a href="#home" class="btn">
-    EXPLORE THE DEVICE
+  <a class="btn light" href="#home">
+    Watch the Product Video
   </a>
-
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<footer class="footer">
+  <h2>THE SLIMMING IRON</h2>
 
-<footer>
+  <p>OFFICIAL PRODUCT WEBSITE</p>
 
-  <div class="footer-brand">
-    THE SLIMMING IRON
+  <p>
+    <a href="https://www.slimmingiron.com/">
+      www.slimmingiron.com
+    </a>
+  </p>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; <span id="currentYear"></span>
+      The Slimming Iron. All Rights Reserved.
+    </p>
   </div>
-
-  <p>
-    BEAUTY | TECHNOLOGY | PERSONAL CARE
-  </p>
-
-  <p>
-    www.slimmingiron.com
-  </p>
-
-  <p>
-    &copy; <span id="year"></span>
-    The Slimming Iron. All Rights Reserved.
-  </p>
-
 </footer>
 
 <script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
 
-  // Attempt muted autoplay on supported browsers.
-  const autoplayVideos = document.querySelectorAll(
-    "video[autoplay]"
-  );
+document.querySelectorAll("video[autoplay]").forEach(function(video) {
+  video.muted = true;
 
-  autoplayVideos.forEach(function(video) {
-    video.muted = true;
+  var playPromise = video.play();
 
-    video.play().catch(function() {
-      // Browser may require user interaction.
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(function() {
+      // Playback may require a user interaction.
     });
-  });
+  }
+});
 </script>
 
 </body>
