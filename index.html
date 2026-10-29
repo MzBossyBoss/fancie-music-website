@@ -1,718 +1,1255 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#261839">
-  <meta name="description" content="Discover The Slimming Iron. Modern beauty technology designed for your body care routine.">
-  <title>The Slimming Iron | Beauty Meets Innovation</title>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-
-    :root {
-      --purple: #261839;
-      --purple-light: #47315c;
-      --gold: #c3a16c;
-      --cream: #fcf7f1;
-      --pink: #f2e5e5;
-      --text: #302b35;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "DM Sans", Arial, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .announcement {
-      background: var(--purple);
-      color: white;
-      text-align: center;
-      padding: 10px 15px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    header {
-      background: white;
-      padding: 18px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .logo {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--purple);
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    nav a {
-      color: var(--purple);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .nav-button, .button {
-      display: inline-block;
-      background: var(--gold);
-      color: #211728;
-      padding: 15px 28px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-align: center;
-      text-transform: uppercase;
-      border-radius: 3px;
-      transition: background .2s ease, transform .2s ease;
-    }
-
-    .button:hover, .nav-button:hover {
-      background: #e0bb81;
-      transform: translateY(-2px);
-    }
-
-    /* HERO SECTION */
-
-    .hero {
-      min-height: 620px;
-      background: linear-gradient(125deg, #251637, #4e3659);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 45px;
-      padding: 65px 7%;
-      overflow: hidden;
-    }
-
-    .hero-copy {
-      color: white;
-      max-width: 570px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    h1, h2, h3 {
-      font-family: "Playfair Display", Georgia, serif;
-    }
-
-    .hero h1 {
-      font-size: clamp(44px, 5.5vw, 76px);
-      font-weight: 600;
-      line-height: 1.12;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 em {
-      color: #dbbb8b;
-      font-style: normal;
-    }
-
-    .hero-copy p {
-      color: #eee5f1;
-      font-size: 17px;
-      max-width: 470px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .button-outline {
-      border: 1px solid rgba(255,255,255,.65);
-      color: white;
-      padding: 14px 24px;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      border-radius: 3px;
-    }
-
-    .hero-video-box {
-      width: 100%;
-      min-height: 450px;
-      border-radius: 18px;
-      background: radial-gradient(circle, #705675 0%, #30203e 75%);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 22px 65px rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.15);
-    }
-
-    .hero-video-box video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      min-height: 450px;
-      max-height: 560px;
-      object-fit: contain;
-      position: relative;
-      z-index: 2;
-    }
-
-    .video-background-label {
-      position: absolute;
-      color: rgba(255,255,255,.25);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(32px, 4vw, 56px);
-      text-align: center;
-      padding: 20px;
-      z-index: 1;
-    }
-
-    .video-label {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      color: white;
-      background: rgba(25,15,35,.75);
-      padding: 10px 16px;
-      border-radius: 4px;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      z-index: 3;
-    }
-
-    /* GOLD BANNER */
-
-    .gold-banner {
-      background: #e3cca5;
-      color: var(--purple);
-      padding: 24px 20px;
-      text-align: center;
-    }
-
-    .gold-banner p {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(20px, 3vw, 30px);
-      font-weight: 600;
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding: 100px 7%;
-      text-align: center;
-      max-width: 1080px;
-      margin: auto;
-    }
-
-    .section-label {
-      color: #987748;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .intro h2, .features h2,
-    .spotlight h2, .cta-section h2 {
-      font-size: clamp(32px, 4vw, 50px);
-      color: var(--purple);
-      line-height: 1.2;
-      margin-bottom: 24px;
-    }
-
-    .intro p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 17px;
-      color: #625b66;
-    }
-
-    /* FEATURE CARDS */
-
-    .features {
-      background: white;
-      padding: 90px 7%;
-      text-align: center;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1200px;
-      margin: 45px auto 0;
-    }
-
-    .feature-card {
-      background: #faf6f4;
-      border: 1px solid #eadfda;
-      padding: 42px 28px;
-      border-radius: 12px;
-      text-align: left;
-    }
-
-    .feature-number {
-      color: #b29464;
-      font-size: 13px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .feature-card h3 {
-      font-size: 25px;
-      margin-bottom: 13px;
-      color: var(--purple);
-    }
-
-    .feature-card p {
-      color: #615964;
-      font-size: 15px;
-    }
-
-    /* PRODUCT SPOTLIGHT */
-
-    .spotlight {
-      padding: 100px 7%;
-      background: var(--pink);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .spotlight-visual {
-      min-height: 400px;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      background: linear-gradient(135deg, #61476b, #261839);
-      color: #ead0a5;
-      text-align: center;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(30px, 4vw, 48px);
-    }
-
-    .spotlight-copy p {
-      color: #605665;
-      margin-bottom: 23px;
-      font-size: 16px;
-    }
-
-    /* CALL TO ACTION */
-
-    .cta-section {
-      background: var(--purple);
-      padding: 105px 7%;
-      text-align: center;
-      color: white;
-    }
-
-    .cta-section h2 {
-      color: white;
-    }
-
-    .cta-section p {
-      color: #ede4ee;
-      font-size: 17px;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    footer {
-      background: #190f27;
-      color: #ddd2e4;
-      text-align: center;
-      padding: 45px 20px;
-      font-size: 13px;
-    }
-
-    footer .footer-logo {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 25px;
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    footer a {
-      color: #dfc092;
-    }
-
-    footer p {
-      margin-top: 12px;
-    }
-
-    /* MOBILE RESPONSIVE */
-
-    @media (max-width: 850px) {
-      header {
-        flex-direction: column;
-        padding: 18px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 55px 6%;
-        gap: 35px;
-      }
-
-      .hero-copy {
-        max-width: 100%;
-      }
-
-      .hero-video-box {
-        min-height: 340px;
-      }
-
-      .hero-video-box video {
-        min-height: 340px;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .spotlight {
-        grid-template-columns: 1fr;
-        padding: 70px 6%;
-      }
-
-      .intro, .features {
-        padding: 70px 6%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 23px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero-video-box,
-      .hero-video-box video {
-        min-height: 280px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .button, .button-outline {
-        width: 100%;
-      }
-
-      .spotlight-visual {
-        min-height: 300px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#302151">
+<meta name="description" content="Discover The Slimming Iron, a new addition to your beauty and body care routine.">
+<title>The Slimming Iron | Discover Beauty Innovation</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  --purple: #302151;
+  --deep: #211638;
+  --lavender: #ae8ac9;
+  --lilac: #e2d2ed;
+  --blush: #f4e9ef;
+  --cream: #fbf7f8;
+  --white: #ffffff;
+  --ink: #352c3e;
+  --muted: #746b79;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.75;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.promo-bar {
+  background: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 11px 15px;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee7ed;
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1500px;
+  margin: auto;
+  min-height: 92px;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  text-align: center;
+  color: var(--purple);
+  min-width: 240px;
+}
+
+.brand-main {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 4px;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 5px;
+  color: #9873ae;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.header-links a {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.header-links a:hover {
+  color: #9b6bb7;
+}
+
+.header-cta {
+  border: 1px solid var(--purple);
+  padding: 12px 18px;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 40% 32% 28%;
+  min-height: 610px;
+  background: var(--blush);
+}
+
+.hero-media {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 40%, #e9d6ee, #9681a7 70%, #513966);
+  overflow: hidden;
+  min-height: 610px;
+}
+
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+}
+
+.video-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  font-family: "Playfair Display", Georgia, serif;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  opacity: .65;
+}
+
+.hero-media video {
+  z-index: 1;
+}
+
+.video-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  background: rgba(33,22,56,.83);
+  color: white;
+  padding: 11px 17px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hero-offer {
+  background: #f7ede8;
+  padding: 55px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-offer-inner {
+  max-width: 430px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #765b8e;
+  margin-bottom: 20px;
+}
+
+.hero-offer h1 {
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 1.04;
+  color: var(--purple);
+  margin-bottom: 23px;
+}
+
+.hero-offer h1 em {
+  font-weight: 400;
+}
+
+.hero-offer .subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-offer .big-line {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 44px);
+  color: var(--purple);
+  line-height: 1.12;
+  margin-bottom: 27px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--purple);
+  color: white;
+  border: none;
+  padding: 18px 32px;
+  min-width: 200px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: background .2s;
+}
+
+.btn:hover {
+  background: #664580;
+}
+
+.offer-note {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #655969;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.hero-side {
+  background:
+    linear-gradient(160deg, #d4bee5, #886da7 65%, #51376b);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 45px 35px;
+  min-height: 610px;
+  color: white;
+}
+
+.hero-side .small {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 26px;
+}
+
+.hero-side h2 {
+  font-size: clamp(37px, 3.5vw, 55px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-side p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #fff7ff;
+}
+
+.hero-side .circle {
+  width: 96px;
+  height: 96px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 20px auto 0;
+  display: grid;
+  place-items: center;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* INFO STRIP */
+
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--purple);
+  color: white;
+  text-align: center;
+}
+
+.info-strip div {
+  padding: 23px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+
+/* INTRO */
+
+.section-intro {
+  padding: 105px 6%;
+  text-align: center;
+  background: white;
+}
+
+.section-intro h2 {
+  font-size: clamp(39px, 5vw, 67px);
+  max-width: 1000px;
+  margin: 0 auto 28px;
+  color: var(--purple);
+  line-height: 1.16;
+}
+
+.section-intro p {
+  max-width: 790px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* EDITORIAL PANELS */
+
+.editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+}
+
+.editorial-card {
+  min-height: 470px;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  overflow: hidden;
+  background: #f6f0f7;
+}
+
+.editorial-card:nth-child(2) {
+  background: #f2ecf4;
+}
+
+.editorial-visual {
+  background: linear-gradient(145deg, #e7d4ea, #8d70a6);
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
+}
+
+.editorial-visual video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+}
+
+.editorial-copy {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.editorial-copy h3 {
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.2;
+  color: var(--purple);
+  margin-bottom: 18px;
+}
+
+.editorial-copy p {
+  color: #65596c;
+  font-size: 15px;
+}
+
+.small-btn {
+  background: var(--lavender);
+  color: white;
+  padding: 14px 23px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 13px;
+}
+
+.small-btn:hover {
+  background: var(--purple);
+}
+
+/* BIG STATEMENT */
+
+.statement {
+  background: white;
+  text-align: center;
+  padding: 115px 6%;
+}
+
+.statement h2 {
+  font-size: clamp(40px, 6vw, 82px);
+  color: #21172a;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.statement em {
+  font-weight: 400;
+  color: #7c5c9b;
+}
+
+/* TECHNOLOGY */
+
+.technology {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  background: var(--cream);
+  align-items: stretch;
+}
+
+.technology-photo {
+  min-height: 560px;
+  background: linear-gradient(140deg, #d9c5e2, #79618e);
+  position: relative;
+}
+
+.technology-photo video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+}
+
+.technology-copy {
+  padding: 85px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.technology-copy h2 {
+  font-size: clamp(39px, 4.5vw, 65px);
+  line-height: 1.12;
+  margin-bottom: 20px;
+  color: #20172d;
+}
+
+.technology-copy h3 {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #6e5976;
+  margin-bottom: 28px;
+}
+
+.technology-copy p {
+  color: #625a65;
+  font-size: 16px;
+  max-width: 640px;
+}
+
+/* BENEFITS */
+
+.benefits {
+  padding: 100px 6%;
+  text-align: center;
+  background: white;
+}
+
+.benefits h2 {
+  font-size: clamp(38px, 4.5vw, 60px);
+  color: var(--purple);
+  margin-bottom: 55px;
+}
+
+.benefits-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: var(--blush);
+  padding: 48px 35px;
+  min-height: 280px;
+  border-top: 4px solid var(--lavender);
+}
+
+.benefit-number {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  color: #a782bb;
+  margin-bottom: 22px;
+}
+
+.benefit-card h3 {
+  font-size: 26px;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+
+.benefit-card p {
+  color: #64596a;
+  font-size: 15px;
+}
+
+/* SHOWCASE */
+
+.showcase {
+  background: #e7d9ec;
+  padding: 100px 6%;
+  text-align: center;
+}
+
+.showcase h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  color: var(--purple);
+  margin-bottom: 42px;
+}
+
+.showcase-video {
+  max-width: 900px;
+  margin: auto;
+  background: #4f3a63;
+  border: 10px solid white;
+  box-shadow: 0 20px 60px rgba(48,33,81,.2);
+}
+
+.showcase-video video {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.showcase p {
+  max-width: 680px;
+  margin: 30px auto 0;
+  color: #564660;
+}
+
+/* FAQ */
+
+.faq {
+  background: white;
+  padding: 100px 6%;
+}
+
+.faq-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: clamp(36px, 4vw, 55px);
+  color: var(--purple);
+  margin-bottom: 40px;
+}
+
+details {
+  border-bottom: 1px solid #dfd3e5;
+  padding: 24px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--purple);
+  font-weight: 600;
+}
+
+details p {
+  color: #64596a;
+  margin: 17px 0 0;
+}
+
+/* CALL TO ACTION */
+
+.final-cta {
+  background: var(--purple);
+  padding: 110px 6%;
+  text-align: center;
+  color: white;
+}
+
+.final-cta h2 {
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1.16;
+  margin-bottom: 25px;
+}
+
+.final-cta p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #e7d9ee;
+}
+
+.final-cta .btn {
+  background: var(--lavender);
+}
+
+footer {
+  background: var(--deep);
+  color: white;
+  text-align: center;
+  padding: 55px 6%;
+}
+
+.footer-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #e3d9e9;
+}
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-media {
+    min-height: 540px;
+  }
+
+  .hero-side {
+    grid-column: 1 / -1;
+    min-height: 270px;
+  }
+
+  .editorial-card {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-visual {
+    min-height: 330px;
+  }
+}
+
+/* PHONES */
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .header-links {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .header-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    min-height: 440px;
+  }
+
+  .hero-offer {
+    padding: 65px 25px;
+  }
+
+  .hero-side {
+    grid-column: auto;
+  }
+
+  .info-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-card {
+    min-height: auto;
+  }
+
+  .technology {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-photo {
+    min-height: 420px;
+  }
+
+  .technology-copy {
+    padding: 65px 7%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statement {
+    padding: 85px 6%;
+  }
+
+  .showcase {
+    padding: 70px 5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ANNOUNCEMENT -->
-  <div class="announcement">
-    The Slimming Iron | Modern Beauty Innovation
-  </div>
+<!-- TOP PROMOTION -->
 
-  <!-- HEADER -->
-  <header>
-    <a href="#" class="logo">
-      THE SLIMMING <span>IRON</span>
+<div class="promo-bar">
+  Introducing a New Beauty Experience
+</div>
+
+<!-- HEADER -->
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <nav class="header-links" aria-label="Product navigation">
+      <a href="#discover">Discover</a>
+      <a href="#benefits">Benefits</a>
+    </nav>
+
+    <a href="#home" class="brand">
+      <span class="brand-main">SLIMMING IRON</span>
+      <span class="brand-sub">BEAUTY TECHNOLOGY</span>
     </a>
 
-    <nav aria-label="Main navigation">
-      <a href="#about">Discover</a>
-      <a href="#features">Features</a>
+    <nav class="header-links" aria-label="Main navigation">
       <a href="#technology">Technology</a>
-      <a href="#contact" class="nav-button">Explore Now</a>
+      <a href="#faq">FAQ</a>
+      <a href="#explore" class="header-cta">Explore</a>
     </nav>
-  </header>
 
-  <!-- HERO SECTION -->
-  <main>
-    <section class="hero" id="home">
+  </div>
+</header>
 
-      <div class="hero-copy">
-        <div class="eyebrow">
-          Discover Your New Beauty Essential
-        </div>
+<main>
 
-        <h1>
-          Meet The<br>
-          <em>Slimming Iron.</em>
-        </h1>
+<!-- MAIN INFOMERCIAL HERO -->
 
-        <p>
-          A new approach to body care.
-          Discover a beautifully designed device
-          created to bring modern beauty technology
-          into your personal routine.
-        </p>
+<section class="hero" id="home">
 
-        <div class="hero-buttons">
-          <a href="#about" class="button">
-            Discover The Device
-          </a>
+  <!-- REAL ROTATING PRODUCT VIDEO -->
 
-          <a href="#technology" class="button-outline">
-            Explore Technology
-          </a>
-        </div>
-      </div>
+  <div class="hero-media">
+    <div class="video-fallback">
+      THE SLIMMING IRON
+    </div>
 
-      <!-- YOUR ROTATING DEVICE VIDEO -->
-      <div class="hero-video-box">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      controls
+      preload="metadata"
+      aria-label="The Slimming Iron rotating product demonstration"
+    >
+      <source src="hero.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
 
-        <div class="video-background-label">
-          THE SLIMMING IRON
-        </div>
+    <div class="video-caption">
+      The Slimming Iron | Product Showcase
+    </div>
+  </div>
 
-        <video
-          id="heroVideo"
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-          preload="auto"
-          aria-label="The Slimming Iron rotating product video"
-        >
-          <source
-            src="The%20Sliming%20Iron%20Rotating.mp4"
-            type="video/mp4"
-          >
+  <!-- CENTER PROMOTIONAL PANEL -->
 
-          <source
-            src="assets/hero.mp4"
-            type="video/mp4"
-          >
-
-          Your browser does not support video.
-        </video>
-
-        <div class="video-label">
-          Discover The Slimming Iron
-        </div>
-      </div>
-
-    </section>
-
-    <!-- GOLD INFOMERCIAL BANNER -->
-    <section class="gold-banner">
-      <p>
-        Beauty. Confidence. Innovation.
-      </p>
-    </section>
-
-    <!-- INTRODUCTION -->
-    <section class="intro" id="about">
-      <div class="section-label">
-        Introducing The Slimming Iron
-      </div>
-
-      <h2>
-        A Different Kind of Beauty Experience
-      </h2>
-
-      <p>
-        Beauty routines are evolving, and so is the
-        technology behind them. The Slimming Iron
-        brings a modern approach to personal body care,
-        combining thoughtful product design with
-        a focus on convenience and everyday beauty.
-      </p>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features" id="features">
-
-      <div class="section-label">
-        The Slimming Iron Experience
-      </div>
-
-      <h2>
-        Designed Around Your Routine
-      </h2>
-
-      <div class="features-grid">
-
-        <article class="feature-card">
-          <div class="feature-number">01 / DESIGN</div>
-          <h3>Modern Design</h3>
-          <p>
-            A contemporary beauty device designed
-            to complement your personal care experience.
-          </p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-number">02 / ROUTINE</div>
-          <h3>Personal Body Care</h3>
-          <p>
-            Explore a modern addition to your
-            beauty and wellness routine.
-          </p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-number">03 / INNOVATION</div>
-          <h3>Beauty Technology</h3>
-          <p>
-            Discover a product experience built
-            around the evolving world of beauty devices.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- TECHNOLOGY SECTION -->
-    <section class="spotlight" id="technology">
-
-      <div class="spotlight-visual">
-        THE<br>SLIMMING IRON
-      </div>
-
-      <div class="spotlight-copy">
-        <div class="section-label">
-          Discover The Device
-        </div>
-
-        <h2>
-          Innovation Meets Personal Care
-        </h2>
-
-        <p>
-          The Slimming Iron is designed to introduce
-          a fresh experience to modern beauty routines.
-        </p>
-
-        <p>
-          Explore the product, learn about its
-          technology, and discover how it fits
-          into your personal beauty journey.
-        </p>
-
-        <a href="#contact" class="button">
-          Learn More
-        </a>
-      </div>
-
-    </section>
-
-    <!-- FINAL PROMOTIONAL SECTION -->
-    <section class="cta-section" id="contact">
+  <div class="hero-offer">
+    <div class="hero-offer-inner">
 
       <div class="eyebrow">
-        Your Beauty Journey
+        The Future of Personal Body Care
       </div>
 
-      <h2>
-        Discover The Slimming Iron
-      </h2>
+      <h1>
+        BEAUTY<br>
+        <em>Reimagined</em>
+      </h1>
 
-      <p>
-        Modern beauty begins with innovation.
-        Explore The Slimming Iron and experience
-        a new chapter in personal body care.
+      <p class="subtitle">
+        Introducing a modern beauty device
+        designed to bring innovation into
+        your personal care routine.
       </p>
 
-      <a href="#home" class="button">
-        Watch The Product Video
+      <div class="big-line">
+        MEET THE<br>
+        SLIMMING IRON
+      </div>
+
+      <a href="#discover" class="btn">
+        DISCOVER MORE
       </a>
 
-    </section>
-  </main>
+      <div class="offer-note">
+        Beauty Meets Innovation
+      </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">THE SLIMMING IRON</div>
+    </div>
+  </div>
+
+  <!-- RIGHT LAVENDER PANEL -->
+
+  <div class="hero-side">
+
+    <div class="small">
+      A New Beauty Essential
+    </div>
+
+    <h2>
+      Make Time<br>
+      for <em>You.</em>
+    </h2>
 
     <p>
-      Beauty | Technology | Innovation
+      Your beauty routine deserves
+      thoughtful design, innovation,
+      and a touch of luxury.
     </p>
 
-    <p>
-      <a href="https://www.slimmingiron.com">
-        www.slimmingiron.com
+    <div class="circle">
+      SELF<br>CARE
+    </div>
+
+  </div>
+
+</section>
+
+<!-- THREE BENEFIT BANNER -->
+
+<div class="info-strip">
+  <div>Beauty Innovation</div>
+  <div>Personal Body Care</div>
+  <div>Modern Device Design</div>
+</div>
+
+<!-- BRAND INTRODUCTION -->
+
+<section class="section-intro" id="discover">
+
+  <div class="eyebrow">
+    Meet The Slimming Iron
+  </div>
+
+  <h2>
+    Discover a Beautifully Different
+    Approach to Body Care.
+  </h2>
+
+  <p>
+    The Slimming Iron introduces a modern approach
+    to at-home beauty routines. With a distinctive
+    design and a focus on personal care, the device
+    brings the experience of beauty technology
+    into your everyday life.
+  </p>
+
+</section>
+
+<!-- TWO EDITORIAL PRODUCT PANELS -->
+
+<section class="editorial">
+
+  <article class="editorial-card">
+
+    <div class="editorial-visual">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="editorial-copy">
+
+      <div class="eyebrow">
+        Discover The Design
+      </div>
+
+      <h3>
+        Beauty Meets Modern Technology
+      </h3>
+
+      <p>
+        Explore the distinctive look
+        of The Slimming Iron and the
+        design behind your newest
+        beauty essential.
+      </p>
+
+      <a href="#technology" class="small-btn">
+        Learn About The Device
       </a>
+
+    </div>
+
+  </article>
+
+  <article class="editorial-card">
+
+    <div class="editorial-visual">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="editorial-copy">
+
+      <div class="eyebrow">
+        Your Personal Routine
+      </div>
+
+      <h3>
+        Designed With Beauty in Mind
+      </h3>
+
+      <p>
+        A modern addition to your
+        body care collection, bringing
+        a new perspective to your
+        personal beauty routine.
+      </p>
+
+      <a href="#benefits" class="small-btn">
+        Explore The Experience
+      </a>
+
+    </div>
+
+  </article>
+
+</section>
+
+<!-- LARGE EDITORIAL HEADLINE -->
+
+<section class="statement">
+
+  <div class="eyebrow">
+    The Slimming Iron Philosophy
+  </div>
+
+  <h2>
+    YOUR BEAUTY.<br>
+    <em>YOUR ROUTINE.</em><br>
+    YOUR MOMENT.
+  </h2>
+
+</section>
+
+<!-- PRODUCT TECHNOLOGY -->
+
+<section class="technology" id="technology">
+
+  <div class="technology-photo">
+    <video autoplay muted loop playsinline preload="none">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="technology-copy">
+
+    <div class="eyebrow">
+      Behind The Slimming Iron
+    </div>
+
+    <h2>
+      THE POWER<br>
+      OF BEAUTY<br>
+      TECHNOLOGY
+    </h2>
+
+    <h3>
+      Innovation for Your Routine
+    </h3>
+
+    <p>
+      Beauty technology is creating new ways
+      to approach personal care at home.
+      The Slimming Iron brings that
+      inspiration into a distinctive
+      beauty device.
     </p>
 
     <p>
-      &copy; <span id="year"></span>
-      The Slimming Iron. All Rights Reserved.
+      Explore the device and learn how
+      it can become part of your
+      personal body care experience.
     </p>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    <a href="#showcase" class="btn">
+      WATCH THE PRODUCT
+    </a>
 
-    const heroVideo = document.getElementById("heroVideo");
+  </div>
 
-    heroVideo.muted = true;
+</section>
 
-    heroVideo.play().catch(function () {
-      // Video controls allow manual playback
-      // if the browser blocks autoplay.
+<!-- BENEFITS -->
+
+<section class="benefits" id="benefits">
+
+  <div class="eyebrow">
+    More Than a Beauty Device
+  </div>
+
+  <h2>
+    The Slimming Iron Experience
+  </h2>
+
+  <div class="benefits-grid">
+
+    <article class="benefit-card">
+      <div class="benefit-number">01</div>
+      <h3>Modern Beauty</h3>
+      <p>
+        Discover a fresh addition to
+        your beauty and body care collection.
+      </p>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-number">02</div>
+      <h3>Personal Care</h3>
+      <p>
+        Make your beauty routine
+        a moment dedicated to yourself.
+      </p>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-number">03</div>
+      <h3>Innovative Design</h3>
+      <p>
+        Explore a distinctive device
+        designed with modern beauty in mind.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE -->
+
+<section class="showcase" id="showcase">
+
+  <div class="eyebrow">
+    See The Device
+  </div>
+
+  <h2>
+    Meet Your New Beauty Essential
+  </h2>
+
+  <div class="showcase-video">
+    <video controls playsinline preload="metadata">
+      <source src="hero.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <p>
+    Take a closer look at The Slimming Iron
+    and discover its distinctive product design.
+  </p>
+
+</section>
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+
+<section class="faq" id="faq">
+
+  <div class="faq-inner">
+
+    <div class="eyebrow" style="text-align:center">
+      Questions and Answers
+    </div>
+
+    <h2>
+      Get to Know The Slimming Iron
+    </h2>
+
+    <details>
+      <summary>What is The Slimming Iron?</summary>
+      <p>
+        The Slimming Iron is a beauty device
+        developed for personal body care.
+        Additional technology and usage information
+        will be provided in the product specifications.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where can I learn about the technology?</summary>
+      <p>
+        Detailed information about the device's
+        functions and operating instructions
+        will be added to the website.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I use the device?</summary>
+      <p>
+        Follow the official instructions
+        supplied with the product.
+        Usage guidance and precautions
+        will be published here.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where can I find product updates?</summary>
+      <p>
+        Visit slimmingiron.com for the latest
+        product information and announcements.
+      </p>
+    </details>
+
+  </div>
+
+</section>
+
+<!-- ENDING CALL TO ACTION -->
+
+<section class="final-cta" id="explore">
+
+  <div class="eyebrow" style="color:#d6b6ed">
+    Discover The Slimming Iron
+  </div>
+
+  <h2>
+    A New Chapter<br>
+    in Beauty Begins Here.
+  </h2>
+
+  <p>
+    Experience a fresh perspective on beauty
+    and explore the design of The Slimming Iron.
+  </p>
+
+  <a href="#home" class="btn">
+    EXPLORE THE DEVICE
+  </a>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-brand">
+    THE SLIMMING IRON
+  </div>
+
+  <p>
+    BEAUTY | TECHNOLOGY | PERSONAL CARE
+  </p>
+
+  <p>
+    www.slimmingiron.com
+  </p>
+
+  <p>
+    &copy; <span id="year"></span>
+    The Slimming Iron. All Rights Reserved.
+  </p>
+
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Attempt muted autoplay on supported browsers.
+  const autoplayVideos = document.querySelectorAll(
+    "video[autoplay]"
+  );
+
+  autoplayVideos.forEach(function(video) {
+    video.muted = true;
+
+    video.play().catch(function() {
+      // Browser may require user interaction.
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
